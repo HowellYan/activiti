@@ -15,6 +15,8 @@ target/
 .project
 .metadata/
 .idea/
+.classpath
+.project
 logs/
 *.log
 dependency-reduced-pom.xml

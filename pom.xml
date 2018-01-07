@@ -12,6 +12,59 @@
         <module>activiti-api</module>
         <module>activiti-web</module>
     </modules>
+    <properties>
+        <activiti.version>6.0.0</activiti.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- https://mvnrepository.com/artifact/org.activiti/activiti-engine -->
+            <dependency>
+                <groupId>org.activiti</groupId>
+                <artifactId>activiti-engine</artifactId>
+                <version>${activiti.version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.activiti/activiti-spring -->
+            <dependency>
+                <groupId>org.activiti</groupId>
+                <artifactId>activiti-spring</artifactId>
+                <version>${activiti.version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.activiti/activiti-bpmn-model -->
+            <dependency>
+                <groupId>org.activiti</groupId>
+                <artifactId>activiti-bpmn-model</artifactId>
+                <version>${activiti.version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.activiti/activiti-bpmn-converter -->
+            <dependency>
+                <groupId>org.activiti</groupId>
+                <artifactId>activiti-bpmn-converter</artifactId>
+                <version>${activiti.version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.activiti/activiti-json-converter -->
+            <dependency>
+                <groupId>org.activiti</groupId>
+                <artifactId>activiti-json-converter</artifactId>
+                <version>${activiti.version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.activiti/activiti-bpmn-layout -->
+            <dependency>
+                <groupId>org.activiti</groupId>
+                <artifactId>activiti-bpmn-layout</artifactId>
+                <version>${activiti.version}</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>5.1.38</version>
+            </dependency>
+
+
+        </dependencies>
+    </dependencyManagement>
 
 
 </project>

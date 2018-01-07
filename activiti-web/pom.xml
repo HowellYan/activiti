@@ -47,6 +47,12 @@
             <groupId>org.activiti</groupId>
             <artifactId>activiti-bpmn-layout</artifactId>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
     </dependencies>
     <build>
         <finalName>activiti-web</finalName>

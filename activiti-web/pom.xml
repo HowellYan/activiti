@@ -60,6 +60,11 @@
             <artifactId>c3p0</artifactId>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/com.alibaba/druid -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+        </dependency>
     </dependencies>
     <build>
         <finalName>activiti-web</finalName>

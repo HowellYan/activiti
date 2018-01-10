@@ -1,19 +1,18 @@
-package c10;
-
-import org.activiti.engine.ProcessEngine;
-import org.activiti.engine.ProcessEngines;
-import org.activiti.engine.RepositoryService;
-import org.activiti.engine.RuntimeService;
-import org.activiti.engine.TaskService;
+import org.activiti.engine.*;
 import org.activiti.engine.history.HistoricVariableInstance;
 import org.activiti.engine.repository.Deployment;
 import org.activiti.engine.repository.ProcessDefinition;
 import org.activiti.engine.runtime.ProcessInstance;
 import org.activiti.engine.task.Task;
 
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.InputStream;
 import java.util.List;
 
-public class VarLocalTest {
+public class IpccActivitiTest5 {
 
     public static void main(String[] args) {
         ProcessEngine engine = ProcessEngines.getDefaultProcessEngine();
@@ -28,13 +27,13 @@ public class VarLocalTest {
         //Deployment dep = rs.createDeployment().addClasspathResource("var_local.bpmn").deploy();
         //开始流程实例
         ProcessDefinition pd = rs.createProcessDefinitionQuery().deploymentId("7501").singleResult();
-        
+
         ProcessInstance pi = runService.startProcessInstanceById(pd.getId());
-        
+
         Task task = taskService.createTaskQuery().processInstanceId(pi.getId()).singleResult();
         taskService.setVariableLocal(task.getId(), "days_no1", 30);
         System.out.println("当前任务：" + task.getName() + ", days参数：" + taskService.getVariableLocal(task.getId(), "days_no1"));
-        
+
         taskService.complete(task.getId());
         System.out.println(pi.getId());
 
@@ -53,7 +52,5 @@ public class VarLocalTest {
                 System.out.println(hiv.getTaskId()+"  "+hiv.getVariableName()+"     "+hiv.getValue()+"      "+hiv.getVariableTypeName());
             }
         }
-
     }
-
 }

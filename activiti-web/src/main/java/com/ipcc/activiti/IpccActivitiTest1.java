@@ -51,6 +51,7 @@ public class IpccActivitiTest1 {
             System.out.println(formProperty.getName());
         }
         // https://www.jianshu.com/p/68c0034f8e56?hmsr=toutiao.io
+        // http://blog.csdn.net/bluejoe2000/article/details/40630985
         taskService.setVariableLocal(task.getId(), "type1", 0);
         System.out.println("当前任务：" + task.getName() + ", type1：" + taskService.getVariableLocal(task.getId(), "type1"));
         taskService.complete(task.getId());

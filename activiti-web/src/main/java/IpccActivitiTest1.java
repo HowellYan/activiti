@@ -14,6 +14,7 @@ public class IpccActivitiTest1 {
 
         rs.createDeployment().addClasspathResource("ipcc_activiti_test1.bpmn20.xml").deploy();
 
+
         ProcessInstance pi = runService.startProcessInstanceByKey("ipcc_activiti_test1");
 
         // 普通员工完成请假的任务

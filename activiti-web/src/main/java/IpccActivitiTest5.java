@@ -25,6 +25,7 @@ public class IpccActivitiTest5 {
 
         // 部署流程定义
         //Deployment dep = rs.createDeployment().addClasspathResource("var_local.bpmn").deploy();
+
         //开始流程实例
         ProcessDefinition pd = rs.createProcessDefinitionQuery().deploymentId("7501").singleResult();
 

@@ -50,7 +50,7 @@ public class IpccActivitiTest1 {
         for (FormProperty formProperty : list) {
             System.out.println(formProperty.getName());
         }
-
+        // https://www.jianshu.com/p/68c0034f8e56?hmsr=toutiao.io
         taskService.setVariableLocal(task.getId(), "type1", 0);
         System.out.println("当前任务：" + task.getName() + ", type1：" + taskService.getVariableLocal(task.getId(), "type1"));
         taskService.complete(task.getId());
